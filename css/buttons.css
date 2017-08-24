@@ -493,12 +493,6 @@
     -webkit-transition: all .25s ease-in;
     transition: all .25s ease-in
 }
-.don-btn:hover {
-    color: #fff;
-    background-position: bottom;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .15), 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .15), 0 1px 1px rgba(0, 0, 0, .075)
-}
 .don-btn-default {
     color: #333
 }
@@ -535,7 +529,7 @@
     right: auto;
     width: 45px
 }
-.don-bubble-hover a:hover .don-count {
+.don-count {
     display: block
 }
 .don-bubble-none a .don-count {
