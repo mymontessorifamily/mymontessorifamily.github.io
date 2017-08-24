@@ -708,8 +708,7 @@
     }) : "undefined" != typeof module && module.exports ? module.exports = b : a.Sizzle = b
 }(window);
 var don = {
-    root: "//share.donreach.com",
-    server: "//share-count.donreach.com/shares",
+    root: "//mymontessorifamily.github.io",
     url: null,
     i: null,
     cssLoaded: !1,
@@ -752,18 +751,6 @@ var don = {
                 }
                 e.limit && e.limit < d && (c.innerHTML += '<button class="don-btn don-share-expand"></button>', Sizzle(".don-share-expand", c)[0].onclick = function(a) {
                     c = a.target.parentNode, c.className.match(/ don-active/g) ? c.className = c.className.replace(" don-active", "") : c.className += " don-active"
-                }), don.JSONP.get(don.server + "/?url=" + encodeURIComponent(don.url) + "&providers=" + h.join(), function(a) {
-                    var b, d = a.shares;
-                    d.total = a.total;
-                    for (var e in d) {
-                        var f = Sizzle(".don-share-" + e, c);
-                        if (f.length) {
-                            var g = d[e];
-                            g > 1e3 && (g = (g / 1e3).toFixed(1), g > 1e3 ? (g = (g / 1e3).toFixed(1), b = "M") : b = "k", g.split(".")[1] && (g = "0" === g.split(".")[1] ? g.split(".")[0] : g), g += b);
-                            var h = Sizzle(".don-count", f[0]);
-                            h.length && (h[0].innerHTML = g)
-                        }
-                    }
                 })
             }(f))
         }
